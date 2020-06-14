@@ -198,7 +198,7 @@ var update = function (modifier) {
 		
 	}
 
-	if(counter == 5){  // adjust this to change "walking speed" of animation
+	if(counter == 3){  // adjust this to change "walking speed" of animation
 		curXFrame = ++curXFrame % frameCount; 	//Updating the sprite frame index 
 	// it will count 0,1,2,0,1,2,0, etc
 		counter = 0;

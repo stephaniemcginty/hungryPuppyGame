@@ -183,9 +183,9 @@ var update = function (modifier) {
 	// Are they touching?
 	if (
 		hero.x <= (monster.x + 32)
-		&& monster.x <= (hero.x + 32)
-		&& hero.y <= (monster.y + 32)
-		&& monster.y <= (hero.y + 32)
+		&& monster.x <= (hero.x + 50)
+		&& hero.y <= (monster.y + 22)
+		&& monster.y <= (hero.y + 50)
 	) {
 		alert('GAME OVER!');
 		initiateAndReset();
