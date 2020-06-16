@@ -187,7 +187,7 @@ var update = function (modifier) {
 		&& hero.y <= (monster.y + 22)
 		&& monster.y <= (hero.y + 50)
 	) {
-		alert('GAME OVER!');
+		alert('GAME OVER! CHUBBY CAT TAKES ALL YOUR FOOD!');
 		initiateAndReset();
 		foodEaten = 0;
 		keysDown = {};
@@ -210,6 +210,7 @@ var update = function (modifier) {
 		if (monsterReady) {
 			ctx.drawImage(monsterImage, monster.x, monster.y);
 		}
+		keysDown = {};
 	}
 
 	if(counter == 5){  // adjust this to change "walking speed" of animation
@@ -375,6 +376,12 @@ var main = function () {
 
 	requestAnimationFrame(main);
 
+	}
+	else if (foodEaten === 0)
+	{
+		alert('GAME OVER! TIME RAN OUT!');
+		fullReset();
+		foodEaten = 0;
 	}
 	else
 	{
